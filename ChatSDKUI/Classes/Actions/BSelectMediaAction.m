@@ -88,6 +88,7 @@
 //        [_picker dismissViewControllerAnimated:NO completion:^{
             if (_squareCrop) {
                 UIImage * image = [info objectForKey:UIImagePickerControllerEditedImage];
+                [picker dismissViewControllerAnimated:YES completion:Nil];
                 if (image) {
                     [self processSelectedImage:image error:nil];
                 } else {
@@ -95,6 +96,7 @@
                 }
             } else {
                 UIImage * image = [info objectForKey:UIImagePickerControllerOriginalImage];
+                [picker dismissViewControllerAnimated:YES completion:Nil];
                 if (_cropperEnabled) {
                     if (image) {
                         [self processSelectedImage:image error:nil];
@@ -103,6 +105,7 @@
                     }
                 } else {
                     _photo = image;
+                    [picker dismissViewControllerAnimated:YES completion:Nil];
                     [_promise resolveWithResult: Nil];
                     _promise = Nil;
                 }
