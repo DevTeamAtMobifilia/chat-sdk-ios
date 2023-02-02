@@ -66,6 +66,7 @@
 
 -(void) showSaveButton {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t: bSave] style:UIBarButtonItemStylePlain target:self action:@selector(save)];
+     self.navigationItem.rightBarButtonItem.tintColor = [UIColor systemBlueColor];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
