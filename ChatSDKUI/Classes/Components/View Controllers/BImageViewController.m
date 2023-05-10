@@ -37,6 +37,7 @@
     NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
     if (version.majorVersion < 13 || BChatSDK.config.alwaysShowBackButtonOnModalViews) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t: bBack] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor systemBlueColor];
     }
     
     if (!self.hideSaveButton) {
